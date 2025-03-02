@@ -1,11 +1,14 @@
 package com.example.video_slicing_tool.model;
 
+import com.example.video_slicing_tool.Enum.VideoFormat;
+import com.example.video_slicing_tool.Enum.VideoQuality;
+
 public class VideoSlice {
     private String pathToOriginalVideo;
     private String sliceBeginning;
     private String sliceEnd;
-    private String videoType;
-    private String videoQuality;
+    private VideoFormat videoFormat;
+    private VideoQuality videoQuality;
 
     public VideoSlice(String pathToOriginalVideo, String sliceBeginning, String sliceEnd) {
         this.pathToOriginalVideo = pathToOriginalVideo;
@@ -13,11 +16,12 @@ public class VideoSlice {
         this.sliceEnd = sliceEnd;
     }
 
-    public VideoSlice(String pathToOriginalVideo, String sliceBeginning, String sliceEnd, String videoType, String videoQuality) {
+    public VideoSlice(String pathToOriginalVideo, String sliceBeginning,
+                      String sliceEnd, VideoFormat videoFormat, VideoQuality videoQuality) {
         this.pathToOriginalVideo = pathToOriginalVideo;
         this.sliceBeginning = sliceBeginning;
         this.sliceEnd = sliceEnd;
-        this.videoType = videoType;
+        this.videoFormat = videoFormat;
         this.videoQuality = videoQuality;
     }
 
@@ -45,19 +49,19 @@ public class VideoSlice {
         this.sliceEnd = sliceEnd;
     }
 
-    public String getVideoType() {
-        return videoType;
+    public VideoFormat getVideoFormat() {
+        return videoFormat;
     }
 
-    public void setVideoType(String videoType) {
-        this.videoType = videoType;
+    public void setVideoFormat(VideoFormat videoFormat) {
+        this.videoFormat = videoFormat;
     }
 
-    public String getVideoQuality() {
+    public VideoQuality getVideoQuality() {
         return videoQuality;
     }
 
-    public void setVideoQuality(String videoQuality) {
+    public void setVideoQuality(VideoQuality videoQuality) {
         this.videoQuality = videoQuality;
     }
 }
