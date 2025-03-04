@@ -5,13 +5,13 @@ public enum RequestStatus {
     COMPLETED("Slicing has been completed. Please follow provided links."),
     FAILED("Slicing failed. Please try again.");
 
-    private final String message;
+    private final String status;
 
-    RequestStatus(String message) {
-        this.message = message;
+    RequestStatus(String status) {
+        this.status = status;
     }
 
-    public String getMessage() {
-        return message;
+    public String getStatus() {
+        return status;
     }
 }

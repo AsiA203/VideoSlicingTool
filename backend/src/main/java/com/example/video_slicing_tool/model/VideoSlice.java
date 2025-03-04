@@ -4,33 +4,33 @@ import com.example.video_slicing_tool.Enum.VideoFormat;
 import com.example.video_slicing_tool.Enum.VideoQuality;
 
 public class VideoSlice {
-    private String pathToOriginalVideo;
+    private Video originalVideo;
     private String sliceBeginning;
     private String sliceEnd;
     private VideoFormat videoFormat;
     private VideoQuality videoQuality;
 
-    public VideoSlice(String pathToOriginalVideo, String sliceBeginning, String sliceEnd) {
-        this.pathToOriginalVideo = pathToOriginalVideo;
+    public VideoSlice(Video originalVideo, String sliceBeginning, String sliceEnd) {
+        this.originalVideo = originalVideo;
         this.sliceBeginning = sliceBeginning;
         this.sliceEnd = sliceEnd;
     }
 
-    public VideoSlice(String pathToOriginalVideo, String sliceBeginning,
+    public VideoSlice(Video originalVideo, String sliceBeginning,
                       String sliceEnd, VideoFormat videoFormat, VideoQuality videoQuality) {
-        this.pathToOriginalVideo = pathToOriginalVideo;
+        this.originalVideo = originalVideo;
         this.sliceBeginning = sliceBeginning;
         this.sliceEnd = sliceEnd;
         this.videoFormat = videoFormat;
         this.videoQuality = videoQuality;
     }
 
-    public String getPathToOriginalVideo() {
-        return pathToOriginalVideo;
+    public Video getOriginalVideo() {
+        return originalVideo;
     }
 
-    public void setPathToOriginalVideo(String pathToOriginalVideo) {
-        this.pathToOriginalVideo = pathToOriginalVideo;
+    public void setOriginalVideo(Video originalVideo) {
+        this.originalVideo = originalVideo;
     }
 
     public String getSliceBeginning() {
