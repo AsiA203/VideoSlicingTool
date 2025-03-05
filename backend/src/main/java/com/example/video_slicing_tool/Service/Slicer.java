@@ -25,9 +25,9 @@ public class Slicer {
             return OriginalVideoStatus.EMPTY_PATH;
         }
 
-        //TODO later should be reused for checking if video exist after downloading from cloud
+        /*TODO later should be reused for checking if video exist on local machine after downloading from cloud */
         if (fileExist(path)) {
-            Video video = new Video(path, )
+            Video video = new Video(path, );
         }
         return null;
     }
