@@ -9,10 +9,7 @@ public class MetaDataExtractor {
     
     String ffprobePath = "/usr/bin/ffprobe";
 
-
-
+    //TODO
     public void getMetaDataFromVideo(String filePath) {
-        try {
-        }
     }
 }

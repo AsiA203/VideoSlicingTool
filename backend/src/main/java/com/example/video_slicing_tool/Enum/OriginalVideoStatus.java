@@ -5,6 +5,7 @@ public enum OriginalVideoStatus {
     COMPLETED("Downloaded"),
     FAILED("Download has failed. Please try again"),
     INCORRECT_PATH("Provided link is incorrect, please check and try again."),
+    WAS_NOT_ABLE_TO_FIND_AT_PATH("Video is not found on path: "),
     EMPTY_PATH("No link was provided");
 
     private final String status;
