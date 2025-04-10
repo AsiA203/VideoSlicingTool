@@ -13,12 +13,12 @@ public class SlicerController {
     }
 
     //@POST
-    public void sliceVideo(String originalVideoPath, VideoSlice videoSlice, String outputSavePath) throws InterruptedException {
-        slicerService.sliceVideo(originalVideoPath, videoSlice, outputSavePath);
+    public void singleSlice(String originalVideoName, VideoSlice videoSlice, int slicingMode, String outputFileName) throws InterruptedException {
+        slicerService.singleSlice(originalVideoName, videoSlice, slicingMode, outputFileName);
     }
 
     //@POST
-    public void severalSlicesVideo(String originalVideoPath, List<VideoSlice> videoSlice, String outputSavePath) throws InterruptedException {
-        slicerService.manySliceVideo(originalVideoPath, videoSlice, outputSavePath);
+    public void manySlices(String originalVideoName, List<VideoSlice> videoSlices, int slicingMode, String outputFileName) throws InterruptedException {
+        slicerService.manySlices(originalVideoName, videoSlices, slicingMode, outputFileName);
     }
 }

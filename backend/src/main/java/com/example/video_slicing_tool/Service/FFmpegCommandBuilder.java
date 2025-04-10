@@ -77,7 +77,6 @@ public class FFmpegCommandBuilder {
             builder.redirectErrorStream(true); //gets all logs
             Process process = builder.start(); //starts the command (pressing Enter)
 
-//            reading the log
             BufferedReader reader = new BufferedReader
                     (new InputStreamReader(process.getInputStream()));
             String line;
@@ -89,12 +88,6 @@ public class FFmpegCommandBuilder {
                 }
             }
 
-//            BufferedReader reader = new BufferedReader(new InputStreamReader(process.getInputStream()));
-//            String line;
-//            while ((line = reader.readLine()) != null) {
-//                System.out.println(line);
-//            }
-
             int status = process.waitFor();
             if (status == 0) {
                 System.out.println("Request is completed");
@@ -105,8 +98,6 @@ public class FFmpegCommandBuilder {
             e.printStackTrace();
         }
     }
-
-    /* */
 
     //Helpers
     public String getSliceProgress(String line, double sliceDuration) {

@@ -12,8 +12,4 @@ public class MetaDataExtractor {
     //TODO
     public void getMetaDataFromVideo(String filePath) {
     }
-
-    public boolean checkIfMetaDataCorrect() {
-
-    }
 }
